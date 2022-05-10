@@ -1,0 +1,257 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &359286870880741735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 359286870880741733}
+  - component: {fileID: 359286870880741734}
+  - component: {fileID: 937073682}
+  - component: {fileID: 937073685}
+  - component: {fileID: 937073683}
+  - component: {fileID: 937073684}
+  - component: {fileID: 937073680}
+  m_Layer: 0
+  m_Name: BSP DungeonMaker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &359286870880741733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359286870880741735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &359286870880741734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359286870880741735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b3295a8b5cfd94da5c8e221b918341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  widthOfDungeon: 50
+  lengthOfDungeon: 50
+  minimumWidthOfRoom: 10
+  minimumLengthOfRoom: 10
+  maximumNumOfInterations: 30
+  widthOfCorridor: 3
+  roomOffset: 2
+  totalNumberOfEnemies: 0
+  totalNumberOfGems: 0
+  bottomCornerModifierOfRoom: 0.3
+  topCornerModifierOfRoom: 1
+  widthOfDungeonText: {fileID: 0}
+  lengthOfDungeonText: {fileID: 0}
+  minimumWidthOfRoomText: {fileID: 0}
+  minimumLengthOfRoomText: {fileID: 0}
+  maximumNumOfInterationsText: {fileID: 0}
+  widthOfCorridorText: {fileID: 0}
+  bottomCornerModifierOfRoomText: {fileID: 0}
+  topCornerModifierOfRoomText: {fileID: 0}
+  roomOffsetText: {fileID: 0}
+  totalNumOfEnemiesText: {fileID: 0}
+  totalNumOfGemsText: {fileID: 0}
+  floorMaterial: {fileID: 2100000, guid: 253b519d63c20fd4fb774e5885808ad6, type: 2}
+  ceilingMaterial: {fileID: 2100000, guid: 253b519d63c20fd4fb774e5885808ad6, type: 2}
+  horizontalWall1: {fileID: 100000, guid: 91d652779ec7140488b6b8e360497937, type: 3}
+  horizontalWall2: {fileID: 7586278541533469610, guid: 49ab273b2d7c4bf4ca0b76616cf883c5,
+    type: 3}
+  horizontalWall3: {fileID: 162224, guid: 62f525a5c612fb04d9041a1e55c345c4, type: 3}
+  verticalWall1: {fileID: 100000, guid: 91d652779ec7140488b6b8e360497937, type: 3}
+  verticalWall2: {fileID: 7586278541533469610, guid: 49ab273b2d7c4bf4ca0b76616cf883c5,
+    type: 3}
+  verticalWall3: {fileID: 162224, guid: 62f525a5c612fb04d9041a1e55c345c4, type: 3}
+  pillar1: {fileID: 100000, guid: b93fbb2e189612641be84b2521736734, type: 3}
+  torch1: {fileID: 8818202689075377530, guid: 2e0308382a93eaf49b92d4d9aa21a679, type: 3}
+  barrelSet1: {fileID: 100000, guid: 36f258ea05b6e8644ae91a5b98eba017, type: 3}
+  cage1: {fileID: 143930, guid: 08e1ecba9be6e5b418edf1bf869b4e00, type: 3}
+  crate1: {fileID: 7191387149251036422, guid: ef375716ec0b2cf4f92bc88b67f5e19d, type: 3}
+  enemy1: {fileID: 8323567022251218110, guid: 45aefdda5c8384d41bb1cc1264f6a6e6, type: 3}
+  enemy2: {fileID: 8323567022251218110, guid: 59ab9b39ba5ccaa4fb08676b077703db, type: 3}
+  gem1: {fileID: 7252810062980642018, guid: 82842fbb06b535f42a7c40c8d8e0e905, type: 3}
+  ammoBook1: {fileID: 5017734281088407656, guid: 838ec15bf597b114d867485a001892be,
+    type: 3}
+  generatingDungeonAlert: {fileID: 0}
+  generateDungeonButton: {fileID: 0}
+  playButton: {fileID: 0}
+  player: {fileID: 0}
+--- !u!82 &937073682
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359286870880741735}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6983c82219afc854aa6d68eaa49881e6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &937073685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359286870880741735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0ca1f36dc4ba1428ba3f0507f7ffda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayGridGizmos: 0
+  unwalkableMask:
+    serializedVersion: 2
+    m_Bits: 512
+  gridWorldSize: {x: 100, y: 100}
+  nodeRadius: 0.2
+  walkableRegions:
+  - terrainMask:
+      serializedVersion: 2
+      m_Bits: 1024
+    terrainPenalty: 5
+  - terrainMask:
+      serializedVersion: 2
+      m_Bits: 512
+    terrainPenalty: 50
+  obstacleProximityPenalty: 300
+--- !u!114 &937073683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359286870880741735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a62c070cc9d893468aa71e48c3c15ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &937073684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359286870880741735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ead924b519e28b4ba9080efd2296c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &937073680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359286870880741735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e26926e8ec8654997a1d20b2eb3e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambience: {fileID: 937073682}
